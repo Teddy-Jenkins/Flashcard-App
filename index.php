@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php 
       define( "TITLE", "Master Flash Cards");
       include("functions.php");
@@ -58,3 +59,20 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       </body>
     </html>
+=======
+<?php
+
+    include('connection.php');
+
+    $query = "SELECT * from users";
+    $result = mysqli_query( $conn, $query );
+
+    if ( mysqli_num_rows($result) > 0 ) {
+        
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo $row["id"] ." ". $row["username"];
+        }
+    }
+
+?>
+>>>>>>> aaf991d58a0b6262cd1f379bd2acc418eafff5f8
