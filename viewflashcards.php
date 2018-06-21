@@ -1,9 +1,11 @@
 <?php
 session_start();
 
-$thequestion = $_SESSION['question'];
+$question = $_SESSION['question'];
 
-echo $thequestion;
+foreach ($question as $key => $value) {
+    echo $value ."<br />";
+};
 
 ?>
 
